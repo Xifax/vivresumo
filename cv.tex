@@ -1,0 +1,198 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+% Author:       Artiom Basenko
+% Version:      0.1
+% Fonts:        Libertine G, O; Biolinum O, Arno Pro
+% Languages:    Русский, English
+% Contents:     Curriculum vitae (на русском)
+
+%%%%%%%%%%%%%
+%  Options  %
+%%%%%%%%%%%%%
+
+% Basics %
+
+% Paper options using the scrartcl class
+\documentclass[a4paper, oneside, final]{scrartcl}
+
+% % Tweak document geometry a little
+% \usepackage[body={4.8in, 7.5in},
+%   top=1.2in, left=1.8in]{geometry}
+
+% % Tweak document geometry a little
+% \usepackage{geometry}
+%  \geometry{
+%  a4paper,
+%  total={210mm,297mm},
+%  left=20mm,
+%  right=20mm,
+%  top=20mm,
+%  bottom=20mm,
+%  }
+
+
+% Multilanguage support (fontspec included)
+\usepackage{polyglossia}
+\setmainlanguage{russian}
+\setotherlanguage{english}
+
+\usepackage{scrpage2} % Provides headers and footers configuration
+\usepackage{titlesec} % Allows creating custom \section's
+\usepackage{marvosym} % Allows the use of symbols
+\usepackage{tabularx,colortbl} % Advanced table configurations
+\defaultfontfeatures{Mapping=tex-text} % Use Tex mappings
+\defaultfontfeatures{Ligatures=TeX} % Use Tex dashes
+
+% Pretty fonts
+\newfontfamily\russianfont[Script=Cyrillic]{Arno Pro}
+\newfontfamily\englishfont[Script=Latin]{Adobe Garamond Pro}
+
+% Advanced %
+
+% Section formatting
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\pagestyle{scrheadings} % Print the headers and footers on all pages
+
+% Set minimal list item spacing
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+% Adjust the vertical offset - less whitespace at the top of the page
+\addtolength{\voffset}{-0.7in}
+% Adjust the text height - less whitespace at the bottom of the page
+\addtolength{\textheight}{3cm}
+
+% Custom highlighting for the work experience and education sections
+\newcommand{\gray}{\rowcolor[gray]{.90}}
+
+% Allow additional lines on the page
+% \enlargethispage{-5\baselineskip}
+
+%%%%%%%%%%%%
+%  Footer  %
+%%%%%%%%%%%%
+
+% Font settings for footer
+\renewcommand{\headfont}{\normalfont\rmfamily\scshape}
+
+\cofoot{
+    % Letter spacing and font size
+    \addfontfeature{LetterSpace=10.0}\fontsize{12.5}{17}\selectfont
+    % Email address and phone number
+    {\Large\Letter} demi.log@gmail.com \ {\Large\Telefon} +7(904) 551-1140
+}
+
+% Document START %
+
+\begin{document}
+
+\begin{center} % Center everything!
+
+%%%%%%%%%%%%
+%  Header  %
+%%%%%%%%%%%%
+
+{\addfontfeature{LetterSpace=10.0}\fontsize{26}{26}\selectfont\scshape
+    Басенко Артем Сергеевич
+}
+
+\vspace{0.5cm} % Extra whitespace after title
+
+%%%%%%%%%%%%
+% Personal %
+%%%%%%%%%%%%
+
+\section{Личные данные}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+    Год рождения & 1988 \\
+    Место проживания & Сертолово, ул. Кленовая (ст. м. "Проспект Просвещения")\\
+    Телефон & +7(904)551-1140 \\
+    Email & demi.log@gmail.com
+\end{tabular}
+
+%%%%%%%%%%%%%
+% Objective %
+%%%%%%%%%%%%%
+
+\section{Цель}
+
+% A position in the field of computers with special interests in business applications \\ programming, information processing, and management systems.
+Получение должности разработчика веб-приложений. \\
+Интересует разработка как серверной так и пользовательской части.
+
+%%%%%%%%%%%%%%
+% Experience %
+%%%%%%%%%%%%%%
+
+\section{Опыт работы}
+
+\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2.7cm}X}
+    \gray Период & \textbf{Ноябрь 2013 -- настоящее время}\\
+    \gray Работодатель & \textbf{Фриланс}\\
+    % \gray Должность & \textbf{Программист PHP}\\
+    \gray Технологии & \textbf{PHP, AngularJS, HTML, SASS}\\
+    \hline
+    \center Должностные обязанности: &
+        \begin{itemize}
+            \item Разработка фронтенда и бэкенда для новостного ресурса
+            \item Создание пользовательской части "виртуального репетитора"
+            \item Профилирование и оптимизация приложения
+            \item Настройка сервера и системы непрерывной интеграции
+        \end{itemize}
+\end{tabularx}
+
+\vspace{6pt}
+
+\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2.7cm}X}
+    \gray Период & \textbf{Август 2011 -- ноябрь 2013}\\
+    \gray Работодатель & \textbf{ООО Управление Механизации}\\
+    % \gray Должность & \textbf{Программист PHP}\\
+    \gray Технологии & \textbf{PHP, JavaScript, HTML, CSS, ActionScript, Java, Android}\\
+    \hline
+    \center Должностные обязанности: &
+        \begin{itemize}
+            \item Проектирование и реализация архитектуры распределённой системы документооборота
+            \item Разработка веб-сервиса электронных подарков на основе QR-кодов
+            \item Реализация API для мобильных и FLEX приложений
+            \item Создание мобильного приложения и встраиваемого Flash-модуля
+            \item Настройка системы непрерывной интеграции
+        \end{itemize}
+\end{tabularx}
+
+%%%%%%%%%%%%%
+% Education %
+%%%%%%%%%%%%%
+
+\section{Образование}
+
+\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2.7cm}X}
+    \gray Период & \textbf{2005 -- 2011} \\
+    \gray Степень & \textbf{Магистр информационных технологий} \\
+    \gray Университет & \textbf{Государственный политехнический (СПбГПУ)} \\
+    \gray Факультет & \textbf{Технической Кибернетики (ФТК)} \\
+    \gray Специальность & \textbf{Инженер-проектировщик дискретных устройств}
+\end{tabularx}
+
+%%%%%%%%%%%%%%
+%   Skills   %
+%%%%%%%%%%%%%%
+
+\section{Навыки}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+    Операционные системы & Windows, Linux (Debian, Arch, CentOS), OS X \\
+    Языки программирования & PHP, Python, JavaScript, Java \\
+    Протоколы, форматы данных и API & XML, JSON, YAML, SOAP, REST \\
+    Базы данных & MySQL, PostgreSQL, Redis, MongoDB \\
+    Инструментарий & Git, SVN, Vim, Eclipse, IntelliJ, Vagrant, LaTeX \\
+    Библиотеки & ZendFramework, Django, Bottle, AngularJS, SASS, Grunt \\
+    Иностранные языки & Английский (advanced), Японский (JLPT N2)
+\end{tabular}
+
+% Document END %
+
+\end{center}
+
+\end{document}
