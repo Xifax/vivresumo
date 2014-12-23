@@ -7,9 +7,9 @@
 % Languages:    Русский, English
 % Contents:     Curriculum vitae (на русском)
 
-%%%%%%%%%%%%%
-%  Options  %
-%%%%%%%%%%%%%
+                                 %%%%%%%%%%%%%
+                                 %  Options  %
+                                 %%%%%%%%%%%%%
 
 % Basics %
 
@@ -32,11 +32,11 @@
 \defaultfontfeatures{Ligatures=TeX} % Use Tex dashes
 
 % Pretty fonts
-\newfontfamily\russianfont[Script=Cyrillic]{Linux Libertine O}
+% \newfontfamily\russianfont[Script=Cyrillic]{Linux Libertine O}
 \newfontfamily\englishfont[Script=Latin]{Linux Biolinum O}
 
 % % Alternatives
-% \newfontfamily\russianfont[Script=Cyrillic]{PT Serif}
+\newfontfamily\russianfont[Script=Cyrillic]{PT Serif}
 % \newfontfamily\russianfont[Script=Cyrillic]{PT Sans}
 % \newfontfamily\russianfont[Script=Cyrillic]{Cuprum}
 % \newfontfamily\russianfont[Script=Cyrillic]{Gentium Plus}
@@ -62,15 +62,14 @@
 % Allow additional lines on the page
 % \enlargethispage{-5\baselineskip}
 
-%%%%%%%%%%%%
-%  Footer  %
-%%%%%%%%%%%%
+                                 %%%%%%%%%%%%
+                                 %  Footer  %
+                                 %%%%%%%%%%%%
 
 % Font settings for footer
 \renewcommand{\headfont}{\normalfont\rmfamily\scshape}
 
-\cofoot{
-    % Letter spacing and font size
+\cofoot{% Letter spacing and font size
     \addfontfeature{LetterSpace=10.0}\fontsize{12.5}{17}\selectfont
     % Email address and phone number
     {\Large\Letter} demi.log@gmail.com \ {\Large\Telefon} +7(904) 551-1140
@@ -82,9 +81,9 @@
 
 \begin{center} % Center everything!
 
-%%%%%%%%%%%%
-%  Header  %
-%%%%%%%%%%%%
+                                 %%%%%%%%%%%%
+                                 %  Header  %
+                                 %%%%%%%%%%%%
 
 {\addfontfeature{LetterSpace=10.0}\fontsize{26}{26}\selectfont\scshape
     Басенко Артем Сергеевич
@@ -92,71 +91,86 @@
 
 \vspace{0.5cm} % Extra whitespace after title
 
-%%%%%%%%%%%%
-% Personal %
-%%%%%%%%%%%%
+                                 %%%%%%%%%%%%
+                                 % Personal %
+                                 %%%%%%%%%%%%
 
 \section{Личные данные}
 
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+\begin{tabular}{@{} >{\bfseries}l @{\hspace{6ex}} l }
     Год рождения & 1988 \\
     Место проживания & Сертолово, ул. Кленовая (ст. м. "Проспект Просвещения")\\
     Телефон & +7(904)551-1140 \\
     Email & demi.log@gmail.com
 \end{tabular}
 
-%%%%%%%%%%%%%
-% Objective %
-%%%%%%%%%%%%%
+                                 %%%%%%%%%%%%%
+                                 % Objective %
+                                 %%%%%%%%%%%%%
 
 \section{Цель}
 
 Получение должности разработчика веб-приложений. \\
 Интересует разработка как серверной так и пользовательской части.
 
-%%%%%%%%%%%%%%
-% Experience %
-%%%%%%%%%%%%%%
+                                %%%%%%%%%%%%%%
+                                % Experience %
+                                %%%%%%%%%%%%%%
 
 \section{Опыт работы}
 
 \begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2.7cm}X}
-    \gray Период & \textbf{Ноябрь 2013 -- настоящее время}\\
+    \gray Период & \textbf{Август 2014 -- настоящее время}\\
     \gray Работодатель & \textbf{Фриланс}\\
     % \gray Должность & \textbf{Веб-программист}\\
-    \gray Технологии & \textbf{PHP, AngularJS, HTML, SASS}\\
+    \gray Технологии & \textbf{PHP, JavaScript, Python, Java (Android)}\\
     % \hline
     \center &
         \begin{itemize}
-            \item Разработка фронтенда и бэкенда для новостного ресурса
-            \item Создание пользовательской части "виртуального репетитора"
-            \item Профилирование и оптимизация приложения
-            \item Настройка сервера и системы непрерывной интеграции
+            \item Перенос существующего мультимедийно-новостного портала на
+                новую платформу (ZendFramework 2, AngularJS, Redis)
+            \item Профилирование и оптимизация приложений на слабых серверах
+            (кеширование запросов и шаблонов, рефакторинг внутренней логики и
+            моделей Doctrine)
+            \item Рефакторинг клиент-серверной системы (Android + Kohana):
+                реализация фоновых задач на сервере, кеширование данных на
+                стороне мобильного приложения, отладка асинхронного клиента
+            \item Настройка непрерывной интеграции (Atlassian Bamboo + Git) и
+                написание утилит развёртывания для веб-проектов
+            \item Разработка системы для управления совокупностью GoIP
+                устройств (Django, Celery)
         \end{itemize}
 \end{tabularx}
 
 \vspace{6pt}
 
 \begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2.7cm}X}
-    \gray Период & \textbf{Август 2011 -- ноябрь 2013}\\
-    \gray Работодатель & \textbf{ООО Управление Механизации}\\
+    \gray Период & \textbf{Июль 2011 -- август 2014}\\
+    \gray Работодатель & \textbf{ООО ТД Электрострой}\\
     % \gray Должность & \textbf{Веб-программист}\\
-    \gray Технологии & \textbf{PHP, JavaScript, HTML, CSS, ActionScript, Java, Android}\\
+    \gray Технологии & \textbf{PHP, JavaScript, ActionScript, Java
+(Android)}\\
     % \hline
     \center &
         \begin{itemize}
-            \item Проектирование и реализация архитектуры распределённой системы документооборота
-            \item Разработка веб-сервиса электронных подарков на основе QR-кодов
+            \item Проектирование и реализация архитектуры распределённой
+                системы документооборота на основе Yii
+            \item Разработка веб-сервиса электронных подарков на базе
+                QR-кодов
             \item Реализация API для мобильных и Flex приложений
-            \item Создание мобильного приложения и встраиваемого Flash-модуля
-            \item Настройка системы непрерывной интеграции
-            \item Создание задач для сервера Gearman
+            \item Создание мобильного приложения (Android) и встраиваемого
+            Flash-модуля для сканирования и регистрации кодов
+            \item Перенос существующего фронтенда на AngularJS с модификацией
+                серверной части
+            \item Реализация отправки отложенных СМС сообщений (Gearman)
+            \item Интеграция платёжных систем (Банк Авангард, Platron,
+        Робокасса)
         \end{itemize}
 \end{tabularx}
 
-%%%%%%%%%%%%%
-% Education %
-%%%%%%%%%%%%%
+                                 %%%%%%%%%%%%%
+                                 % Education %
+                                 %%%%%%%%%%%%%
 
 \section{Образование}
 
@@ -165,23 +179,24 @@
     \gray Степень & \textbf{Магистр информационных технологий} \\
     \gray Университет & \textbf{Государственный политехнический (СПбГПУ)} \\
     \gray Факультет & \textbf{Технической Кибернетики (ФТК)} \\
-    \gray Специальность & \textbf{Инженер-проектировщик дискретных устройств}
+    \gray Степень & \textbf{Магистр информатики и вычислительной техники}
 \end{tabularx}
 
-%%%%%%%%%%%%%%
-%   Skills   %
-%%%%%%%%%%%%%%
+                                %%%%%%%%%%%%%%
+                                %   Skills   %
+                                %%%%%%%%%%%%%%
 
 \section{Навыки}
 
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-    Операционные системы & Windows, Linux (Debian, Arch, CentOS), OS X \\
-    Языки программирования & PHP, Python, JavaScript, Coffeescript, Java \\
+\begin{tabular}{@{} >{\bfseries}l @{\hspace{6ex}} l }
+    Операционные системы & Windows, Linux (Debian, Arch) \\
+    Языки программирования & PHP, Python, JavaScript, Java \\
     Технологии & XML, JSON, YAML, HTML, CSS, SASS, REST \\
     Базы данных & MySQL, PostgreSQL, Redis, MongoDB \\
-    Инструментарий & Git, Mercurial, SVN, Vim, Eclipse, IntelliJ, Vagrant, LaTeX \\
-    Библиотеки & ZendFramework, Django, Bottle, AngularJS, jQuery, Grunt,
-    Selenium \\
+    Инструментарий & Git, Mercurial, SVN, Vim, Eclipse, AndroidStudio,
+    Vagrant, \LaTeX \\
+    Библиотеки & ZendFramework, Django, Bottle, AngularJS, jQuery,
+    Grunt, Yeoman, Composer \\
     Иностранные языки & Английский (advanced), Японский (JLPT N2)
 \end{tabular}
 
